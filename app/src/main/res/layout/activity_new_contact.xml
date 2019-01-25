@@ -12,25 +12,49 @@
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:ems="10"
-            tools:layout_editor_absoluteY="328dp" tools:layout_editor_absoluteX="84dp" android:id="@+id/editText"
-            android:contentDescription="Instert your Email address"/>
+            android:id="@+id/newContactEmail"
+            android:contentDescription="Instert your Email address"
+            android:hint="Enter Contact's E-mail"
+            tools:layout_editor_absoluteX="85dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.657"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:ems="10"
-            tools:layout_editor_absoluteY="232dp" tools:layout_editor_absoluteX="84dp" android:id="@+id/editText2"
-            android:contentDescription="Enter your phone number"/>
+            android:id="@+id/newContactNumber"
+            android:contentDescription="Enter your phone number"
+            android:hint="Enter contact's Number"
+            tools:layout_editor_absoluteX="85dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/newContactEmail" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/newContactName"/>
     <EditText
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:inputType="textPersonName"
             android:ems="10"
-            tools:layout_editor_absoluteY="125dp" tools:layout_editor_absoluteX="84dp" android:id="@+id/editText3"
-            android:contentDescription="Enter your Name"/>
+            android:id="@+id/newContactName"
+            android:hint="Enter contact's Name"
+            tools:layout_editor_absoluteX="85dp" android:layout_marginTop="44dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView"/>
     <TextView
-            android:text="Add NEW CONTACT"
+            android:text="ADD NEW CONTACT"
             android:layout_width="194dp"
-            android:layout_height="39dp" tools:layout_editor_absoluteY="24dp"
-            tools:layout_editor_absoluteX="95dp" android:id="@+id/textView" android:textSize="18sp"/>
+            android:layout_height="39dp"
+            android:id="@+id/textView" android:textSize="18sp"
+            tools:layout_editor_absoluteX="95dp" android:layout_marginTop="40dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+            android:text="Go Back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="60dp" android:id="@+id/backButton" android:layout_marginTop="56dp"
+            app:layout_constraintTop_toBottomOf="@+id/newContactEmail"/>
+    <Button
+            android:text="Submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="212dp" android:id="@+id/SubmitContact" android:layout_marginTop="52dp"
+            app:layout_constraintTop_toBottomOf="@+id/newContactEmail"/>
 </android.support.constraint.ConstraintLayout>
